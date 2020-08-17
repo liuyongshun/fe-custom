@@ -1,0 +1,23 @@
+
+#Root {
+  height: 100%;
+  background-color: #f3f3f3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.layout {
+  position: absolute;
+  top: 70px;
+  bottom: 38px;
+  left: 0;
+  margin: auto;
+  right: 0;
+  display: flex;
+
+  &-main {
+    flex: 1;
+  }
+}
