@@ -21,6 +21,6 @@ export interface RequestHeader {
 }
 
 export interface ErrorField extends Error {
-  resStatus?: number,
-  response?: Response
+  resStatus?: number;
+  response?: Response;
 }

@@ -11,16 +11,24 @@ import './index.less';
 const CustomNav = () => {
   const [value, setValue] = useState('1');
 
-  const handleChange = (): void => { };
+  const handleChange = (): void => {};
 
   return (
     <BottomNavigation value={value} onChange={handleChange} className="">
       <BottomNavigationAction label="首页" value="1" icon={<HomeIcon />} />
       <BottomNavigationAction label="推荐" value="2" icon={<CachedIcon />} />
-      <BottomNavigationAction label="商城" value="3" icon={<AddShoppingCartIcon />} />
-      <BottomNavigationAction label="我的" value="4" icon={<AccountCircleIcon />} />
+      <BottomNavigationAction
+        label="商城"
+        value="3"
+        icon={<AddShoppingCartIcon />}
+      />
+      <BottomNavigationAction
+        label="我的"
+        value="4"
+        icon={<AccountCircleIcon />}
+      />
     </BottomNavigation>
   );
-}
+};
 
 export default CustomNav;

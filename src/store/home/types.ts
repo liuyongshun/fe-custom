@@ -8,4 +8,4 @@ export interface State {
 export type Action =
   | { type: 'START' }
   | { type: 'STOP' }
-  | { type: 'NEW_RESOURCE'; payload: number }
+  | { type: 'NEW_RESOURCE'; payload: number };

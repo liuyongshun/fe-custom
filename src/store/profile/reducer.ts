@@ -9,7 +9,7 @@ const reducer = (state: State, action: Action) => {
     case 'ADD_RESOURCES': {
       const { payload } = action;
 
-      return state.map(agent =>
+      return state.map((agent) =>
         agent.id === payload.id
           ? {
               ...agent,

@@ -59,7 +59,7 @@ export default async function request(
       'X-Access-Token': window.sessionStorage.getItem('token'),
       'Cache-Control': 'no-cache',
       Pragma: 'no-cache'
-    },
+    }
   };
 
   // option 配置合并
@@ -83,13 +83,13 @@ export default async function request(
       newOptions.headers = {
         Accept: 'application/json',
         'Content-Type': 'application/json; charset=utf-8',
-        ...newOptions.headers,
+        ...newOptions.headers
       };
       newOptions.body = JSON.stringify(newOptions.body);
     } else {
       newOptions.headers = {
         Accept: 'application/json',
-        ...newOptions.headers,
+        ...newOptions.headers
       };
     }
   }
