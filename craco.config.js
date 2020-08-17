@@ -1,20 +1,12 @@
 /* craco.config.js */
 const path = require('path');
-let public_path = '/'
+const CracoAlias = require("craco-alias");
+let public_path = './'
 
-const pathResolve = pathUrl => path.join(__dirname, pathUrl);
+const pathResolve = pathUrl => path.resolve(__dirname, pathUrl);
 
 module.exports = {
   webpack: {
-    alias: {
-      '@': pathResolve('src'),
-      '@assets': pathResolve('src/assets'),
-      '@common': pathResolve('src/common'),
-      '@components': pathResolve('src/components'),
-      '@pages': pathResolve('src/pages'),
-      "@store": pathResolve('src/store'),
-      '@utils': pathResolve('src/utils')
-    },
     configure: {
       output: {
         publicPath: public_path
@@ -29,6 +21,14 @@ module.exports = {
     ]
   },
   plugins: [
+    {
+      plugin: CracoAlias,
+      options: {
+        source: 'tsconfig',
+        baseUrl: './',
+        tsConfigPath: './tsconfig.extend.json'
+      }
+    },
     {
       plugin: [],
       options: {

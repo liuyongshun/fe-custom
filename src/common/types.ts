@@ -16,8 +16,12 @@ export interface CodeMessage {
   [key: number]: string;
 }
 
-export interface RequestHeader {
+export interface ObjData {
   [key: string]: any;
+}
+
+export interface StringObj {
+  [key: string]: string;
 }
 
 export interface ErrorField extends Error {

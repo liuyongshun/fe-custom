@@ -1,5 +1,5 @@
 import { useSnackbar } from 'notistack';
-import { CodeMessage, ErrorField, RequestHeader } from './types';
+import { CodeMessage, ErrorField, ObjData } from './types';
 import currEnvConfig from './constants';
 // =======================================start==============================================
 // fetch 不会发送 cookies。除非你使用了credentials 的初始化选项。credentials: 'same-origin',
@@ -50,10 +50,10 @@ const checkStatus = (response: any) => {
 
 export default async function request(
   url: string,
-  options: object,
-  config: object
+  options: ObjData,
+  config: ObjData
 ) {
-  const defaultOptions: RequestHeader = {
+  const defaultOptions: ObjData = {
     credentials: 'include',
     headers: {
       'X-Access-Token': window.sessionStorage.getItem('token'),

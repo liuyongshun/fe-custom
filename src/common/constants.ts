@@ -1,4 +1,4 @@
-import { process, EnvData } from './types';
+import { process, EnvData, StringObj } from './types';
 
 const ENV: string = process.env.APP_ENV;
 const envConfig: EnvData = {
@@ -20,5 +20,5 @@ const envConfig: EnvData = {
   }
 };
 
-const currEnvConfig: object = envConfig[ENV] || envConfig.dev;
+const currEnvConfig: StringObj = envConfig[ENV] || envConfig.dev;
 export default currEnvConfig;
