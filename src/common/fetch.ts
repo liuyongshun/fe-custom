@@ -1,6 +1,6 @@
 import { useSnackbar } from 'notistack';
-import { CodeMessage } from './types';
-import currEnvConfig from '@common/constants';
+import { CodeMessage, ErrorField, RequestHeader } from './types';
+import currEnvConfig from './constants';
 // =======================================start==============================================
 // fetch 不会发送 cookies。除非你使用了credentials 的初始化选项。credentials: 'same-origin',
 // function postData(url, data) {
@@ -42,7 +42,7 @@ const checkStatus = (response: any) => {
     return response;
   }
   const errortext = codeMessage[response.status];
-  const error = new Error(errortext);
+  let error: ErrorField = new Error(errortext);
   error['resStatus'] = response.status;
   error['response'] = response;
   throw error;
@@ -53,7 +53,7 @@ export default async function request(
   options: object,
   config: object
 ) {
-  const defaultOptions = {
+  const defaultOptions: RequestHeader = {
     credentials: 'include',
     headers: {
       'X-Access-Token': window.sessionStorage.getItem('token'),
@@ -65,8 +65,8 @@ export default async function request(
   // option 配置合并
   if (options && typeof options === 'object') {
     Object.entries(options).forEach((item: string[]) => {
-      const key = item[0];
-      const value = item[1];
+      const key: string = item[0];
+      const value: any = item[1];
       if (typeof value !== 'object') {
         defaultOptions[key] = value;
       } else {

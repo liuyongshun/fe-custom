@@ -15,3 +15,12 @@ export interface EnvData {
 export interface CodeMessage {
   [key: number]: string;
 }
+
+export interface RequestHeader {
+  [key: string]: any;
+}
+
+export interface ErrorField extends Error {
+  resStatus?: number,
+  response?: Response
+}
