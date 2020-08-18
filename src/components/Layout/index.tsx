@@ -13,7 +13,9 @@ const Layout = (props: Props) => (
     <main className="layout">
       <div className="layout-main">{props.children}</div>
     </main>
-    <Nav />
+   	<div className="footer-nav">
+   		<Nav />
+   	</div>
     <Loading />
   </Provider>
 );

@@ -8,15 +8,27 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import './index.less';
 
-const CustomNav = () => {
+const CustomNav = (props) => {
   const [value, setValue] = useState('1');
+  console.log();
 
-  const handleChange = (): void => {};
+  const handleChange = (e: any): void => {
+    console.log(e);
+    setValue(e);
+  };
 
   return (
-    <BottomNavigation value={value} onChange={handleChange} className="">
-      <BottomNavigationAction label="首页" value="1" icon={<HomeIcon />} />
-      <BottomNavigationAction label="推荐" value="2" icon={<CachedIcon />} />
+    <BottomNavigation value={value} onChange={handleChange}>
+      <BottomNavigationAction 
+        label="首页" 
+        value="1" 
+        icon={<HomeIcon />} 
+      />
+      <BottomNavigationAction 
+        label="推荐" 
+        value="2" 
+        icon={<CachedIcon />} 
+      />
       <BottomNavigationAction
         label="商城"
         value="3"

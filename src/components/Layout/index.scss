@@ -10,8 +10,8 @@
 
 .layout {
   position: absolute;
-  top: 70px;
-  bottom: 38px;
+  top: 0px;
+  bottom: 0px;
   left: 0;
   margin: auto;
   right: 0;
@@ -20,4 +20,11 @@
   &-main {
     flex: 1;
   }
+}
+.footer-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
 }
