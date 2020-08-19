@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
@@ -8,27 +10,21 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import './index.less';
 
-const CustomNav = (props) => {
+const CustomNav = (props: any) => {
   const [value, setValue] = useState('1');
-  console.log();
+  const history = useHistory();
+  console.log(props, history);
 
   const handleChange = (e: any): void => {
     console.log(e);
     setValue(e);
+    useHistory
   };
 
   return (
     <BottomNavigation value={value} onChange={handleChange}>
-      <BottomNavigationAction 
-        label="首页" 
-        value="1" 
-        icon={<HomeIcon />} 
-      />
-      <BottomNavigationAction 
-        label="推荐" 
-        value="2" 
-        icon={<CachedIcon />} 
-      />
+      <BottomNavigationAction label="首页" value="1" icon={<HomeIcon />} />
+      <BottomNavigationAction label="推荐" value="2" icon={<CachedIcon />} />
       <BottomNavigationAction
         label="商城"
         value="3"

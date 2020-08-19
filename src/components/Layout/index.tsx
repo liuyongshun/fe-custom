@@ -14,9 +14,9 @@ const Layout = (props: Props) => (
       <div className="layout-main">{props.children}</div>
     </main>
    	<div className="footer-nav">
-   		<Nav />
+   		<Nav {...props} />
    	</div>
-    <Loading />
+    <Loading /> 
   </Provider>
 );
 
