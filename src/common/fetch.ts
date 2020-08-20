@@ -37,12 +37,12 @@ const codeMessage: CodeMessage = {
 const methods = ['POST', 'PUT', 'DELETE'];
 
 // 错误状态校验
-const checkStatus = (response: any) => {
+const checkStatus = (response: any): any => {
   if (response.status >= 200 && response.status < 500) {
     return response;
   }
   const errortext = codeMessage[response.status];
-  let error: ErrorField = new Error(errortext);
+  const error: ErrorField = new Error(errortext);
   error['resStatus'] = response.status;
   error['response'] = response;
   throw error;

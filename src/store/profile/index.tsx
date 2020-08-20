@@ -19,6 +19,6 @@ export const Provider: React.ComponentType = (props: Props) => {
   );
 };
 
-export const useDispatch = () => React.useContext(dispatchCtx);
+export const useDispatch: any = () => React.useContext(dispatchCtx);
 
-export const useState = () => React.useContext(stateCtx);
+export const useState: any = () => React.useContext(stateCtx);

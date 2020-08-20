@@ -8,7 +8,7 @@ import Car from '@pages/Car/index';
 import Profile from '@pages/Profile/index';
 import NotFound from '@pages/NotFound/index';
 
-function App() {
+function App(): React.ReactNode {
   return (
     <Provider>
       <BrowserRouter>

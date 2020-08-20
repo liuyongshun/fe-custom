@@ -1,6 +1,6 @@
 import { Action, State, Item } from './types';
 
-const reducer = (state: State, action: Action) => {
+const reducer: any = (state: State, action: Action) => {
   state = state || [];
 
   switch (action.type) {

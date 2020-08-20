@@ -3,7 +3,7 @@ import { useState } from '@store/home/index';
 
 import './index.scss';
 
-const Loading = () => {
+const Loading: React.ReactNode = () => {
   const loading = useState('loading');
 
   return loading ? (

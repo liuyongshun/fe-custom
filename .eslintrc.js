@@ -29,13 +29,6 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": [0, { allowTypedFunctionExpressions: true }],
     "react/state-in-constructor": 0,
     // import/extensions 这个规则不能正确处理文件后缀名
-    "import/extensions": ['error', 'ignorePackages', {
-      js: 'never',
-      mjs: 'never',
-      jsx: 'never',
-      ts: 'never',
-      tsx: 'never',
-    }],
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-static-element-interactions": 0,
     "react/jsx-props-no-spreading": 0,
@@ -48,6 +41,9 @@ module.exports = {
     "object-curly-newline": 0,
   },
   settings: {
+    "react": {
+      "version": "detect"
+    },
     "import/resolver": {
       node: {
         extensions: [".js", ".jsx", ".ts", ".tsx"]

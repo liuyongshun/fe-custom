@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-
+import { useHistory } from 'react-router';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
@@ -13,12 +12,10 @@ import './index.less';
 const CustomNav = (props: any) => {
   const [value, setValue] = useState('1');
   const history = useHistory();
-  console.log(props, history);
 
   const handleChange = (e: any): void => {
     console.log(e);
     setValue(e);
-    useHistory
   };
 
   return (

@@ -8,15 +8,15 @@ import { Props } from '@/types';
 
 import './index.scss';
 
-const Layout = (props: Props) => (
+const Layout = (props: Props): React.ReactNode => (
   <Provider>
     <main className="layout">
       <div className="layout-main">{props.children}</div>
     </main>
-   	<div className="footer-nav">
-   		<Nav {...props} />
-   	</div>
-    <Loading /> 
+    <div className="footer-nav">
+      <Nav {...props} />
+    </div>
+    <Loading />
   </Provider>
 );
 

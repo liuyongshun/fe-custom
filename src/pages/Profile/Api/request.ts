@@ -1,4 +1,4 @@
-import request from '@/common/fetch';
+// import request from '@/common/fetch';
 // import api from '@/common/api';
 // import { stringify } from 'qs';
 
