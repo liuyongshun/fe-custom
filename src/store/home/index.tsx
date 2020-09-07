@@ -13,7 +13,7 @@ const stateCtx = React.createContext(initState);
 const dispatchCtx = React.createContext((() => 0) as React.Dispatch<Action>);
 
 export const Provider: React.ComponentType = (props: Props) => {
-  const [state, dispatch] = React.useReducer(reducer, initState);
+  const [state, dispatch]: any[] = React.useReducer(reducer, initState);
 
   return (
     <dispatchCtx.Provider value={dispatch}>

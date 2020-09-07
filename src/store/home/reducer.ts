@@ -1,6 +1,6 @@
 import { Action, State } from './types';
 
-const reducer: { [label: string]: any } = (state: State, action: Action) => {
+const reducer: any = (state: State, action: Action) => {
   switch (action.type) {
     case 'START':
       return { ...state, loading: true };

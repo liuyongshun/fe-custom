@@ -8,7 +8,7 @@ import { Props } from '@/types';
 
 import './index.scss';
 
-const Layout = (props: Props): React.ReactNode => (
+const Layout: React.SFC = (props: Props) => (
   <Provider>
     <main className="layout">
       <div className="layout-main">{props.children}</div>
