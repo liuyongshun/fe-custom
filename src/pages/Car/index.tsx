@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Car: React.ReactNode = () => <div>home</div>;
+const Car: React.FC<unknown> = () => <div>home</div>;
 
 export default Car;

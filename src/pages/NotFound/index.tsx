@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './index.scss';
 
-const NotFound: React.ReactNode = () => (
+const NotFound: React.FC<unknown> = () => (
   <div className="notfound">
     <h3 className="notfound-title">404</h3>
     <p>

@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { Props } from '@/types';
-
 import providers from './providers';
 
-const Provider = (props: Props): any =>
+const Provider = (props: any) =>
   providers.reduceRight(
     (children, Parent) => <Parent>{children}</Parent>,
     props.children
