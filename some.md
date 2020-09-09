@@ -1,3 +1,5 @@
+### JS
+
 - 面向对象语言的三大特征： 封装、继承、多态
 
 - 各自特点：
@@ -14,7 +16,75 @@
 
 - 一段流畅的动画帧与帧之间间隔有什么要求:  多数情况下最高的绘制频率只能是每秒60帧，对应于显示器的60Hz，低于该频率，画面卡顿，高于该频率，耗费性能。因此采用的时间间隔就是1/60,也就是16.7ms
 
+**typeof**
 
+```
+typeof (() => {})             // function
+typeof []                     // object
+typeof {}                     // object
+typeof null                   // object
+typeof undefined              // undefined
+typeof (new Promise(() => {}))// object
+typeof Promise                // function
+typeof Symbol('3')            // symbol
+typeof 3                      // number
+typeof true                   // boolean
+typeof ''                     // string
+'子君' instanceof String      // false
+new Date() instanceof Date    // true
+```
+instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上 `object instanceof constructor`
+
+instanceof，无法判断基本类型，但可以正确判断引用类型
+
+
+**对象的toString**
+
+```
+const d = {}
+const e = {key: '1'}
+const f = {key: '2'}
+d[e] = '12'
+d[f] = '21'
+
+console.log(d[e])   // 21
+```
+ 因为e和f都是对象，而对象的key只能是数值或字符，所以会将对象转换为字符，对象的toString方法返回的是[object Object]
+
+
+ **基本包装类型**
+
+ 为了便于操作基本类型值，ECMAScript 提供了 3 个特殊的引用类型：Boolean、Number 和String，每当读取一个基本类型值得时候，后台就会创建一个对应的基本包装类型的对象，从而让我们能够调用一些方法来操作这些数据
+
+ *例*
+
+ ```
+  var s1="some text";  
+  var s2=s1.substring(2);  
+ ```
+s1 是基本类型值，而s1代码调用了 substring() 方法，我们知道，基本类型值不是对象，因而从逻辑上讲它们不应该有方法。
+
+为了让我们实现这种直观的操作，后台已经自动完成了一系列的处理。当第二行代码访问 s1 时，访问过程处于一种读取模式，也就是从内存中读取这个字符串的值。而在读取模式中访问字符串时，后台都会自动完成下列处理。
+
+- 创建 String 类型的一个实例；
+
+- 在实例上调用指定的方法；
+
+- 销毁这个实例；
+
+**类比过程如下**
+
+```
+var s1=new String("some text");  
+
+var s2=s1.substring(2);  
+
+s1=null;  
+```
+
+**引用类型与基本包装类型的主要区别就是对象的生存期**
+
+### CSS
 
 - 什么是BFC： 页面上的一个隔离的独立容器，不受外界干扰或干扰外界
 

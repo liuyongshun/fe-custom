@@ -27,10 +27,24 @@
 
 - 检查tool 选项下的 block list 和 allow list（黑白名单）
 
-二、 手机安装 SSL 证书
+二、 手机安装 SSL 证书 
 
 Charles 建议的安装方法。
 通过 Help->SSL Proxying->Install Charles Root Certificate On a mobile device ，可以看到以下提示：
 
 配置代理
+
+### window 下 ios配置
+
+- 通过 Help->SSL Proxying->Install Charles Root Certificate 打开证书安装
+
+- 需要手机和运行 Charles 的电脑在同一个局域网内
+
+- 启动 Charles，点击 Proxy-Proxy Settings，查看并设置端口
+
+- 查看电脑ip地址和上一步设置的端口号，配置到手机的wifi，手动代理
+
+- （注意打开地址一定是开着charles才会提示下载）手动安装证书，点击 http://chls.pro/ssl 下载证书。下载好以后，需要先去ios的设置里，安装该证书。
+
+- 证书安装成功后，去iso的 设置 -> 通用 -> 关于本机 -> 证书信任设置 -> 信任证书。
 

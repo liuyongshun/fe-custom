@@ -47,6 +47,19 @@
 
 链表是一种在物理上非连续、非顺序的数据结构
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 6  有哪些常见算法？
 
 首先要明确：特定算法解决特定问题。
@@ -155,3 +168,36 @@ new关键字
 - 执行构造函数， 当this关键字被提及的时候，使用新创建的对象的属性。
 
 - 返回新创建的对象
+
+
+
+
+
+
+
+
+
+
+
+chrome调试：
+
+https://toolbox.googleapps.com/apps/main/
+
+HAR
+
+
+
+charles
+
+断点：
+
+
+- 右键某个接口，选择breakpoint。
+
+- 刷新页面从新调用接口，断点接口会一直处于pending状态。
+
+- charles进入断点模式，右侧显示 overview 和 Edit Request。右侧底部显示Cancel 、 Abort、 Execute
+
+- 点击Execute断点进入下一步，再次点击显示Edit Response
+
+- 在 Edit Request 可以编辑请求信息， 在 Edit Response 可以编辑修改返回信息，方便调试接口参数
