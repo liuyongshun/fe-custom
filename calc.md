@@ -201,3 +201,25 @@ charles
 - 点击Execute断点进入下一步，再次点击显示Edit Response
 
 - 在 Edit Request 可以编辑请求信息， 在 Edit Response 可以编辑修改返回信息，方便调试接口参数
+
+
+限速
+
+在调试安卓或者ios手机时，有时候我们需要模拟弱网络环境，这个时候可以用charles的限速功能
+
+- Proxy -> Throttle setting -> 勾选 Enable Throttle -> 勾选only for selected hosts -> 添加要限定的指定域名下的请求。
+
+- 也可以自己预设一个网速，通过Add Preset 添加后，可以在Throttle Preset 里找到自己的预设并使用。
+
+- 设置完后点击小乌龟图标 Start Throttle 开始限速，或者 Proxy -> Start Throttle 开始限速
+
+
+**代理本地请求到dev或者test环境，甚至线上**
+
+- charles 正常情况下时不会抓取 localhost 请求的，我们可以通过配置来实现
+
+- window 下 `C:\Windows\System32\drivers\etc` 修改 hosts (可以拷贝一份到外面，改后后在替换，这样就可以提供管理员权限替换) `127.0.0.1 localhost.charlesproxy.com` 增加 本地到 `localhost.charlesproxy.com` 映射关系。
+
+- 配置 tool -> Map Remote Settings , https的端口是443，通配符 * 可以匹配任意内容。
+
+- 这样我们就可以通过请求 `http://localhost.charlesproxy.com:7001/cop-marketing-activity/api/v1/activity/page/campaign/info` 代理到 `https://dev-marketing-wap.svwsx.cn/cop-marketing-activity/api/v1/activity/page/campaign/info`
