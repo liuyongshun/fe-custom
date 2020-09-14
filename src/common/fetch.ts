@@ -51,8 +51,8 @@ const checkStatus = (response: any): any => {
 export default async function request(
   url: string,
   options: ObjData,
-  config: ObjData
-) {
+  config: ObjData = {}
+): Promise<any> {
   const defaultOptions: ObjData = {
     credentials: 'include',
     headers: {

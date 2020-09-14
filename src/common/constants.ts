@@ -1,9 +1,9 @@
-import { process, EnvData, StringObj } from './types';
+import { EnvData, StringObj } from './types';
 
-const ENV: string = process.env.APP_ENV;
+const ENV = 'dev';
 const envConfig: EnvData = {
   dev: {
-    baseUrl: 'https://...',
+    baseUrl: 'http://localhost:3433',
     otherUrl: 'https://...'
   },
   test: {
